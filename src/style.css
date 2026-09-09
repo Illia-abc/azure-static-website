@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+    padding: 80px 0 60px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 16px;
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 48px 0;
+}
+
+.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #0078d4;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Stack section */
+.stack {
+    margin: 48px 0;
+}
+
+.stack h2 {
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.stack ul {
+    list-style: none;
+}
+
+.stack li {
+    background: #1e293b;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border-left: 3px solid #0078d4;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}
