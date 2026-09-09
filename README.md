@@ -44,14 +44,14 @@ See [docs/architecture.md](docs/architecture.md) for a more detailed explanation
 azure-static-website/
 │
 ├── src/
-│ ├── index.html
-│ └── style.css
+│   ├── index.html
+│   └── style.css
 │
 ├── infrastructure/
-│ └── main.bicep
+│   └── main.bicep
 │
 ├── docs/
-│ └── architecture.md
+│   └── architecture.md
 │
 ├── .gitignore
 └── README.md
