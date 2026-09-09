@@ -41,6 +41,7 @@ See [docs/architecture.md](docs/architecture.md) for a more detailed explanation
 
 ## Project Structure
 
+```
 azure-static-website/
 │
 ├── src/
@@ -55,6 +56,7 @@ azure-static-website/
 │
 ├── .gitignore
 └── README.md
+```
 
 
 ## Deployment
