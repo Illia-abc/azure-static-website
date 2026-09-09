@@ -57,9 +57,9 @@ This is why the deployment process has two steps: first Bicep provisions the Sto
 
 ### Resources Provisioned
 
-| Resource | Purpose |
-|---|---|
-| Storage Account (`StorageV2`) | Hosts static website files and serves them over HTTPS |
+| Resource                        | Purpose                                              |
+|----------------------------------|-------------------------------------------------------|
+| Storage Account (`StorageV2`)   | Hosts static website files and serves them over HTTPS |
 
 ## Terraform
 
