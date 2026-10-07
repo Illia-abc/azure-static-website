@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Static Site | Azure pet project</title>
+  <meta name="description" content="A simple static website deployed to Azure Static Web Apps, first manually through the Azure Portal and then with Bicep.">
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph (link preview) -->
+  <meta property="og:title" content="My Static Site">
+  <meta property="og:description" content="Pet project: Azure Static Web Apps, Azure Portal and Bicep">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">my<span>.site</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#journey">Journey</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="eyebrow">Pet project · Azure · Infrastructure as Code</p>
+        <h1>A static website, <span class="accent">built to learn Azure</span></h1>
+        <p class="lead">
+          A simple site made with HTML and CSS, hosted on Azure Static Web Apps.
+          I deployed it by hand in the Azure Portal first, then described the same
+          infrastructure in Bicep to make it repeatable.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/YOUR_USER/YOUR_REPO" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a class="btn btn-ghost" href="#journey">See the journey</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About the project</h2>
+        <p class="section-intro">
+          The goal is simple: go from a couple of files on my laptop to a live
+          website in the cloud, and understand every step along the way.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <h3>⚡ Fast</h3>
+            <p>Static files are served from a global CDN. No servers to manage and no build step.</p>
+          </article>
+          <article class="card">
+            <h3>🔒 Secure</h3>
+            <p>HTTPS out of the box, plus security headers and a Content-Security-Policy in the config.</p>
+          </article>
+          <article class="card">
+            <h3>🔁 Repeatable</h3>
+            <p>The infrastructure is described in Bicep: one file, one command, the same result every time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section section-alt" id="stack">
+      <div class="container">
+        <h2>Tech stack</h2>
+        <ul class="tags" aria-label="Technologies">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Azure Static Web Apps</li>
+          <li>Azure Portal</li>
+          <li>Bicep</li>
+          <li>Azure CLI</li>
+          <li>SWA CLI</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section" id="journey">
+      <div class="container">
+        <h2>The journey</h2>
+        <p class="section-intro">
+          Each step builds on the previous one. The last two are next on my list.
+        </p>
+        <ol class="steps">
+          <li>
+            <h3>Azure Portal</h3>
+            <p>Create the resource group and the Static Web App manually to understand how the pieces fit together.</p>
+          </li>
+          <li>
+            <h3>Bicep</h3>
+            <p>Describe the same infrastructure as code, delete everything, and redeploy with a single command.</p>
+          </li>
+          <li>
+            <h3>Next: CI/CD and Terraform</h3>
+            <p>Automate deployments with GitHub Actions, then rebuild the infrastructure in Terraform to compare.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
