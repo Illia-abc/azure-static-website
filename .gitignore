@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node / SWA CLI
+node_modules/
+.swa/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
