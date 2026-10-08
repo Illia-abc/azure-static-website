@@ -97,6 +97,7 @@ Open the **Tags** tab and add:
 | `owner`       | `illia`          |
 | `deployment`  | `portal`         |
 | `purpose`     | `Pet-Project`    |
+
 Click **Review + create**.
 
 After validation completes, click **Create**.
