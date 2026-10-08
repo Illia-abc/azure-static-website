@@ -1,6 +1,77 @@
+# Azure Static Website
+
+A simple static website deployed to Microsoft Azure using the Azure Portal.
+
+The project was created as a practical exercise to learn Azure resource management, storage accounts, static website hosting, and basic cloud deployment workflows.
+
+🔗 **Live demo:** `https://ststaticwebsite0129.z36.web.core.windows.net/`
+
+![Deployed Website](docs/screenshots/08-website.png)
+
+---
+
+## Architecture
+
+The project uses:
+
+- **Azure Resource Group**
+- **Azure Storage Account**
+- **Static Website hosting**
+- **Azure Blob Storage**
+- **Azure Portal**
+
+The website files are stored in the `$web` container provided by Azure Static Website hosting.
+
+```text
+Resource Group (rg-static-website)
+└── Storage Account (ststaticwebsite0129)
+    └── Static Website
+        └── $web
+            ├── index.html
+            ├── style.css
+            └── 404.html
+```
+
+---
+
+## Project Structure
+
+```text
+azure-static-website/
+│
+├── src/
+│   ├── index.html
+│   └── style.css
+│
+├── docs/
+│   └── screenshots/
+│       ├── 01-resource-group.png
+│       ├── 02-storage-account.png
+│       ├── 03-storage-advanced.png
+│       ├── 04-static-website.png
+│       ├── 05-web-container.png
+│       ├── 06-website-files.png
+│       ├── 07-resources.png
+│       └── 08-website.png
+│
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Prerequisites
+
+- An [Azure account](https://azure.microsoft.com/free/) (the free tier is enough)
+- The website files from the `src/` folder
+
+> Steps verified in October 2026. The Azure Portal UI may change slightly over time.
+
+---
+
 # Deployment using Azure Portal
 
-пш
 Open the [Azure Portal](https://portal.azure.com/).
 
 In the search bar, enter:
@@ -31,6 +102,8 @@ Click **Review + create**.
 After validation completes, click **Create**.
 
 ![Azure Resource Group](docs/screenshots/01-resource-group.png)
+
+---
 
 # Step 2 — Create a Storage Account
 
@@ -68,7 +141,7 @@ Open the **Tags** tab and add:
 
 ![Tags for Storage Account](docs/screenshots/03-storage-account-tags.png)
 
-### Configure Another Settings
+## Configure Another Settings
 
 For this learning project, the default settings can be used for all another settings page.
 
@@ -76,7 +149,9 @@ Click **Review + create**.
 
 After validation completes, click **Create**.
 
-# Step 4 — Enable Static Website Hosting
+---
+
+# Step 3 — Enable Static Website Hosting
 
 Open the newly created Storage Account.
 
@@ -102,7 +177,9 @@ This container is used to store the static website files.
 
 ![Enable Static Website](docs/screenshots/04-static-website.png)
 
-# Step 5 — Open the $web Container
+---
+
+# Step 4 — Open the $web Container
 
 In the Storage Account, go to:
 
@@ -121,7 +198,9 @@ The $web container is automatically created when Static Website hosting is enabl
 
 ![\$web Container](docs/screenshots/05-web-container.png)
 
-# Step 6 — Upload Website Files
+---
+
+# Step 5 — Upload Website Files
 
 Inside the $web container, click:
 
@@ -153,7 +232,9 @@ The site uses absolute paths such as /style.css, so the files must stay in the r
 
 ![Upload Website Files](docs/screenshots/06-website-files.png)
 
-# Step 7 — Get the Website URL
+---
+
+# Step 6 — Get the Website URL
 
 Return to:
 
@@ -172,7 +253,9 @@ https://ststaticwebsite0129.z36.web.core.windows.net/
 ```
 ![Deployed Azure Resources](docs/screenshots/07-resources.png)
 
-# Step 8 — Verify the Deployment
+---
+
+# Step 7 — Verify the Deployment
 
 Check the following:
 
@@ -205,7 +288,7 @@ Finally, open **Resource Group → Overview** and confirm that the Storage Accou
 
 ---
 
-## Step 9 — Update the Website
+# Step 8 — Update the Website
 
 1. Edit the files in the `website/` folder.
 2. Open `$web` in the Storage Account.
@@ -215,7 +298,7 @@ Finally, open **Resource Group → Overview** and confirm that the Storage Accou
 
 ---
 
-## Step 10 — Clean Up (Optional)
+# Step 9 — Clean Up (Optional)
 
 To avoid unexpected charges, delete everything at once:
 
