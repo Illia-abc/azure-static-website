@@ -1,0 +1,7 @@
+# Azure
+subscription_id = "00000000-0000-0000-0000-000000000000"
+location        = "polandcentral"
+
+# Project
+resource_group_name = "rg-static-website"
+environment         = "dev"
