@@ -1,0 +1,45 @@
+name: Validate infrastructure
+
+on:
+  pull_request:
+    paths:
+      - "infrastructure/**"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "infrastructure/**"
+      - ".github/workflows/validate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  terraform:
+    name: Terraform (fmt, validate)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infrastructure/terraform
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - name: Format check
+        run: terraform fmt -check -recursive
+
+      - name: Init (no backend)
+        run: terraform init -backend=false
+
+      - name: Validate
+        run: terraform validate
+
+  bicep:
+    name: Bicep (build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build template
+        run: az bicep build --file infrastructure/bicep/main.bicep --stdout > /dev/null
